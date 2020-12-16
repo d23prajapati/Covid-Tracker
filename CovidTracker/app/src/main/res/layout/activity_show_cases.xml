@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".showCases">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+    <TextView
+        android:id="@+id/country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="12dp"
+        android:text="Country"
+        android:textSize="30sp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/countryValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/country"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"
+        android:text="-------------"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/activeCases"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/countryValue"
+        android:layout_marginTop="10dp"
+        android:text="Active Cases"
+        android:textSize="30sp"
+        android:textColor="#303F9F"/>
+
+    <TextView
+        android:id="@+id/activeCasesValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/activeCases"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"
+        android:text="0"
+        android:textSize="25sp"
+        android:textColor="#303F9F"/>
+
+        <TextView
+            android:id="@+id/critical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activeCasesValue"
+            android:layout_marginTop="10dp"
+            android:text="Critical"
+            android:textSize="30sp"
+            android:textColor="#E64A19"/>
+
+        <TextView
+            android:id="@+id/criticalValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/critical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            android:text="0"
+            android:textSize="25sp"
+            android:textColor="#E64A19"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+        <TextView
+            android:id="@+id/newCases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/criticalValue"
+            android:layout_marginTop="10dp"
+            android:text="New Cases"
+            android:textSize="30sp"
+            android:textColor="#303F9F"/>
+
+        <TextView
+            android:id="@+id/newCasesValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/newCasesValue"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            android:text="0"
+            android:textSize="25sp"
+            android:textColor="#303F9F"/>
+        <TextView
+            android:id="@+id/newDeaths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newCasesValue"
+            android:layout_marginTop="10dp"
+            android:text="New Deaths"
+            android:textSize="30sp"
+            android:textColor="#E64A19"/>
+
+        <TextView
+            android:id="@+id/newDeathsValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/newDeaths"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            android:text="0"
+            android:textSize="25sp"
+            android:textColor="#E64A19"/>
+
+        <TextView
+            android:id="@+id/newRecovered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newDeathsValue"
+            android:layout_marginTop="10dp"
+            android:text="New Recovered"
+            android:textSize="30sp"
+            android:textColor="#19CA21"/>
+
+        <TextView
+            android:id="@+id/newRecoveredValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/newRecovered"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            android:text="0"
+            android:textSize="25sp"
+            android:textColor="#19CA21"/>
+
+        <TextView
+            android:id="@+id/totalCases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newRecoveredValue"
+            android:layout_marginTop="10dp"
+            android:text="Total Cases"
+            android:textSize="30sp"
+            android:textColor="#1976D2"/>
+
+        <TextView
+            android:id="@+id/totalCasesValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="0"
+            android:textColor="#0288D1"
+            android:textSize="25sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/totalCases" />
+
+        <TextView
+            android:id="@+id/totalDeaths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/totalCasesValue"
+            android:layout_marginTop="10dp"
+            android:text="Total Deaths"
+            android:textSize="30sp"
+            android:textColor="#D32F2F"/>
+
+        <TextView
+            android:id="@+id/totalDeathsValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/totalDeaths"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            android:text="0"
+            android:textSize="25sp"
+            android:textColor="#D32F2F"/>
+        <TextView
+            android:id="@+id/totalRecovered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/totalDeathsValue"
+            android:layout_marginTop="10dp"
+            android:text="Total Recovered"
+            android:textSize="30sp"
+            android:textColor="#689F38"/>
+
+        <TextView
+            android:id="@+id/totalRecoveredValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/totalRecovered"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            android:text="0"
+            android:textSize="25sp"
+            android:textColor="#689F38"/>
+
+        <TextView
+            android:id="@+id/totalTests"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/totalRecoveredValue"
+            android:layout_marginTop="10dp"
+            android:text="Total Tests"
+            android:textSize="30sp"
+            android:textColor="#FFA000"/>
+
+        <TextView
+            android:id="@+id/totalTestsValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/totalTests"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            android:text="0"
+            android:textSize="25sp"
+            android:textColor="#FFA000"/>
+
+
+
+
+    </LinearLayout>
+</ScrollView>

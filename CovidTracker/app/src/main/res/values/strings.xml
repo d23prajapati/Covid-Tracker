@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Covid Tracker</string>
+    <string name="nullMsg">Calculted at the end of the day!!</string>
+</resources>
